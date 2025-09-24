@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="./assets/script.js" defer></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <title>Frontend Mentor | Consultar CEP</title>
+  </head>
+
+  
+  <body>
+   <div class="header">
+      <h1>Consultar CEP</h1>
+      <div class="inpArea">
+        <input type="text" id="cep" maxlength="9">
+        <img src="./assets/images/icon-arrow.svg" alt="seta" id="seta">
+      </div>
+      <div class="info">
+          <div>
+            <p class="title">CEP</p>
+            <p class="subtitle cep"></p>
+          </div>
+          <div>
+            <p class="title">Rua</p>
+            <p class="subtitle address"></p>
+          </div>
+          <div>
+            <p class="title">Bairro</p>
+            <p class="subtitle district"></p>
+          </div>
+          <div>
+            <p class="title">Cidade</p>
+            <p class="subtitle city"></p>
+          </div>
+          <div>
+            <p class="title">Estado</p>
+            <p class="subtitle state"></p>
+          </div>
+      </div>
+      <div class="errorArea">
+        <div class="error">
+           <div>
+             <img id="fechar" src="./assets/images/icons8-excluir-16.png" alt="botão excluir">
+           </div>
+          <p class="msg"></p>
+        </div>
+      </div>
+   </div>
+    <div id="map"></div>   
+   <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Tallison Tadeu</a>.
+    </div>
+  </body>
+</html>
