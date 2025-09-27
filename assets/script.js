@@ -8,7 +8,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 // ícone personalizado
 let Icon = L.icon({
-  iconUrl: "../images/icon-location.svg",
+  iconUrl: "./assets/images/icon-location.svg",
   iconSize: [20, 40],
 });
 
@@ -49,6 +49,8 @@ async function consultCep(cep) {
 
   marker = L.marker([lat, lng], { icon: Icon }).addTo(map);
 }
+
+
 function addCEP() {
   let cep = document.querySelector("#cep");
   if (cep) {
@@ -63,6 +65,14 @@ function addCEP() {
   document.querySelector("#seta").addEventListener("click", () => {
     consultCep(cep.value);
     cep.value = "";
+  })
+  document.querySelector("#cep").addEventListener("keyup", (e) => {
+    if(e.key.toLowerCase() === 'enter'){
+    consultCep(cep.value);
+     cep.value = "";
+    
+    }
+    
   })
   ;
   document.querySelector("#fechar").addEventListener("click", () => {
