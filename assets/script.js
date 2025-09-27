@@ -67,7 +67,10 @@ function addCEP() {
     cep.value = "";
   })
   document.querySelector("#cep").addEventListener("keyup", (e) => {
-    if(e.key.toLowerCase() === 'enter'){
+
+    console.log(e.code)
+
+    if(e.keyCode === '13' || e.code.toLowerCase() === 'enter' || e.code.toLowerCase() === 'numpadadd' ){
     consultCep(cep.value);
      cep.value = "";
     
